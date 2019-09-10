@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const productController = require('./contollers/product')
 
 const app = express()
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
@@ -21,5 +22,6 @@ app.use((err, req, res, next) => {
   res.status(err.statusCode).send(err.message)
 })
 
-
 app.listen(port, () => console.log(`App listening on port ${port}!`))
+
+module.exports = app

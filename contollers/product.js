@@ -5,7 +5,7 @@ const create = async (req, res, next) => {
   try {
     const productInfo = await awsScraper(req.body.asin)
     await upsertProduct(productInfo)
-    res.send(productInfo)
+    res.status(201).send(productInfo)
   } catch (err) {
     next(err)
   }
