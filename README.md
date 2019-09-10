@@ -13,3 +13,6 @@ ELASTIC_SEARCH_CLIENT_URL=https://elastic_search_client PORT=5000 npm run test i
 Make sure .env file is created with the variables listed in the .env-template file
 
 `npm run dev` to start
+
+### Frontend Repo
+https://github.com/kfcteh/aws-search-front
